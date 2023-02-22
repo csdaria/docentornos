@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@200;400;600&family=Roboto:wght@400;700&display=swap);
+
+/*Border-box indica que el tamaño del modelo de caja de todos los elementos de la página incluirá contenido, relleno y border, en lugar de solo el contenido */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto',
+        sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*Con un 100 de viewport height indicaremos que la altura del contenedor se ajustará automáticamente para cubrir el 100% de la ventana */
+    height: 100vh;
+    margin: 0;
+}
+
+canvas {
+    border: 2px solid #b246b4;
+}
+
+.toolbox {
+    background-color: #b246b4;
+    border: 1px solid #b246b4;
+    display: flex;
+    width: 780px;
+    padding: 1rem;
+}
+
+.toolbox>* {
+    background-color: #fff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    /*El cursor del ratón cambia a una mano con un dedo índice cuando se pasa por encima del elemento al que se aplica.*/
+    cursor: pointer;
+}
+
+/*La sintaxis .toolbox>* se refiere a todos los elementos hijos directos de un elemento con la clase "toolbox". La pseudo-clase :last-child se aplica solo al último elemento hijo de este conjunto. Por lo tanto, el estilo se aplicará solo al último hijo de un elemento con la clase "toolbox".*/
+.toolbox>*:last-child {
+    margin-left: auto;
+}
+
+button,
+#size,
+input {
+    border-radius: 5px;
+}
